@@ -1,4 +1,5 @@
 import { Text, View } from "react-native";
+import { Dialog } from "tamagui";
 
 export default function Index() {
   return (
@@ -10,6 +11,19 @@ export default function Index() {
       }}
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Dialog>
+        <Dialog.Trigger>Open Dialog</Dialog.Trigger>
+        <Dialog.Portal>
+          <Dialog.Overlay />
+          <Dialog.Content>
+            <Dialog.Title>My Title</Dialog.Title>
+            <Dialog.Description>
+              This is the dialog description.
+            </Dialog.Description>
+            <Dialog.Close>Close</Dialog.Close>
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog>
     </View>
   );
 }
